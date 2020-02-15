@@ -4,26 +4,40 @@ public class Task6 {
     Ввести в виде трех чисел дату следующего дня.*/
 
     public static void main(String[] args) {
-        int Day = 31;               //Будем считать что в каждом месяце 31 день, а по хорошему
-        int Month = 12;             //нужно выщитывать каждый месяц и смотреть на год.
-        int Year = 2020;            //Но наверняка для всего этого уже есть разработанная функция.
+        int day = 30;
+        int month = 11;
+        int year = 2020;
         /*Проверка на корректность даты*/
-        if (Day < 1 || Day > 31) {
+        if (day < 1 || day > 31) {
             System.out.println("Введите день от 1 до 31");
-        } else if (Month < 0 || Month > 12) {
+        } else if (month < 0 || month > 12) {
             System.out.println("Введите месяц от 1 до 12");
+        } else if (day >= 29 && month == 2 && year % 4 != 0){
+            System.out.println("В этом году в феврале 28 дней");
+        } else if (day >= 30 && month == 2 && year % 4 == 0){
+            System.out.println("В этом году в феврале 29 дней");
+        } else if (day == 31 && (month == 4 || month == 6 || month == 9 || month == 11)){
+            System.out.println("Такой даты не существует! Измените день!");
         } else {
-            Day = Day + 1;      //Увеличение даты на один день
-            if (Day > 31) {
-                Month = Month + 1;
-                Day = 1;
-                if (Month > 12) {
-                    Year = Year + 1;
-                    Month = 1;
-                }
-                System.out.println("Следующая дата: " + Day + "." + Month + "." + Year);
-
+            day = day + 1;
+            if (day >= 30 && month == 2 && year % 4 == 0){
+                day = 1;
+                month = month + 1;
+            } else if (day >= 29 && month == 2 && year % 4 != 0){
+                day = 1;
+                month = month + 1;
+            } else if (day == 31 && (month == 4 || month == 6 || month == 9 || month == 11)){
+                day = 1;
+                month = month + 1;
+            } else if (day > 31 && (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10)){
+                day = 1;
+                month = month + 1;
+            } else  if (day > 31 && month == 12){
+                day = 1;
+                month = 1;
+                year = year + 1;
             }
+            System.out.println("Следующая дата: " + day + "." + month + "." + year);
         }
     }
 }
