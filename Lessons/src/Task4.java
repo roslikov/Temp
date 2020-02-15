@@ -5,13 +5,11 @@ public class Task4 {
         круглой картонкой радиусом r.*/
 
     public static void main(String[] args) {
-    int HeightRectangle = 128;      //Высота прямоугольного отверстия
-    int WidthRectangle = 1;         //Ширина прямоугольного отверстия
+    int HeightRectangle = 6;        //Высота прямоугольного отверстия
+    int WidthRectangle = 3;         //Ширина прямоугольного отверстия
     int RadiusCircle = 50;          //Радиус круга
-
-    if ((HeightRectangle * WidthRectangle) < (2 * Math.PI * RadiusCircle)
-        && (RadiusCircle * 2) > HeightRectangle
-        && (RadiusCircle * 2) > WidthRectangle){
+        
+    if ((Math.abs((HeightRectangle * HeightRectangle)+(WidthRectangle * WidthRectangle)) / 2  < RadiusCircle)){
         System.out.println("Круг перекрывает прямоугольное отверстие");
     }
     else {
