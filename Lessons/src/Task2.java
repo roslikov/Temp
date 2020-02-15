@@ -1,4 +1,4 @@
-public class Lesson2 {
+public class Task2 {
 
     public static void main(String[] args) {
         int SecIn = 4018385;
