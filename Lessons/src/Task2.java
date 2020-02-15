@@ -1,4 +1,4 @@
-public class Lesson2 {
+public class Task2 {
         /*Перевести секунды в недели, сутки, часы, минуты, секунды.*/
     public static void main(String[] args) {
         int SecIn = 4018385;
