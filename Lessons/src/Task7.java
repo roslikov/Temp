@@ -6,24 +6,32 @@ public class Task7 {
 
     public static void main(String[] args) {
             /*Ввод параметров участка и домов*/
-        int HPlot = 15;
-        int WPlot = 15;
-        int HFirstHouse = 5;
-        int WFirstHouse = 12;
-        int HSecondHouse = 8;
-        int WSecondHouse = 4;
+        int hPlot = 15;
+        int wPlot = 15;
+        int hFirstHouse = 5;
+        int wFirstHouse = 12;
+        int hSecondHouse = 8;
+        int wSecondHouse = 4;
+            int hThoHouse = hFirstHouse + hSecondHouse;
+            int wThoHouse = wFirstHouse + wSecondHouse;
+            int hwThoHouse = hFirstHouse + wSecondHouse;
+            int whThoHouse = wFirstHouse + hSecondHouse;
             /*Первая проверка входят ли дома по площади на участок*/
-        if (HPlot * WPlot >= (HFirstHouse * WFirstHouse) + (HSecondHouse * WSecondHouse)){
+        if (hPlot * wPlot >= (hFirstHouse * wFirstHouse) + (hSecondHouse * wSecondHouse)){
             /*Проверяем поместятся ли дома до одной из сторон участка*/
-            if (HPlot >= HFirstHouse + HSecondHouse && WPlot >= WSecondHouse + WFirstHouse){
-                System.out.println("Дома поместятся на участок");
-                } else if (HPlot >= HFirstHouse + WSecondHouse && WPlot >= WFirstHouse + HSecondHouse){
-                System.out.println("Дома поместятся на участок");
-                } else {
-                System.out.println("Дома на учаток НЕ поместятся");
+            if (hPlot >= hThoHouse && wPlot >= wThoHouse){
+                System.out.println("Все ГУД!");
+            } else if (hPlot >= wThoHouse && wPlot >= hThoHouse){
+                System.out.println("Все ГУД!");
+            } else if (hPlot >= hwThoHouse && wPlot >= whThoHouse){
+                System.out.println("Все ГУД!");
+            } else if (hPlot >= whThoHouse && wPlot >= hwThoHouse){
+                System.out.println("Все ГУД!");
+            } else {
+                System.out.println("Дома на учаток НЕ поместятся!");
                 }
             } else {
-            System.out.println("Дома на учаток НЕ поместятся");
+            System.out.println("Дома на учаток НЕ поместятся!");
         }
     }
 }
