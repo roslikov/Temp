@@ -3,6 +3,7 @@
 *.iml
 *.attach*
 .idea/*
+*.pach
 
 # Log file
 *.log
