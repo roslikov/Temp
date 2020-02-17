@@ -6,18 +6,17 @@ public class Task7 {
 
     public static void main(String[] args) {
             /*Ввод параметров участка и домов*/
-        int hPlot = 15;
+        int hPlot = 5;
         int wPlot = 15;
         int hFirstHouse = 5;
-        int wFirstHouse = 12;
-        int hSecondHouse = 8;
-        int wSecondHouse = 4;
+        int wFirstHouse = 3;
+        int hSecondHouse = 3;
+        int wSecondHouse = 11;
             int hThoHouse = hFirstHouse + hSecondHouse;
             int wThoHouse = wFirstHouse + wSecondHouse;
             int hwThoHouse = hFirstHouse + wSecondHouse;
             int whThoHouse = wFirstHouse + hSecondHouse;
-            /*Первая проверка входят ли дома по площади на участок*/
-        if (hPlot * wPlot >= (hFirstHouse * wFirstHouse) + (hSecondHouse * wSecondHouse)){
+
             /*Проверяем поместятся ли дома до одной из сторон участка*/
             if (hPlot >= hThoHouse && wPlot >= wThoHouse){
                 System.out.println("Все ГУД!");
@@ -29,9 +28,6 @@ public class Task7 {
                 System.out.println("Все ГУД!");
             } else {
                 System.out.println("Дома на учаток НЕ поместятся!");
-                }
-            } else {
-            System.out.println("Дома на учаток НЕ поместятся!");
-        }
+            }
     }
 }
