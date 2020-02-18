@@ -7,3 +7,4 @@
 
 # Log file
 *.log
+/out/production/Lessons/META-INF/Lessons.kotlin_module
