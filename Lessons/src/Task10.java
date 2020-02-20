@@ -3,7 +3,7 @@ public class Task10 {
 
         /*Имеется целое число. Следует посчитать сумму цифр данного числа.*/
 
-        int number = 545544556;
+        int number = 102;
         int sum = 0;
         int ostat = 0;
 
@@ -11,7 +11,7 @@ public class Task10 {
             ostat = number % 10;
             sum += (ostat);
             number /= 10;
-            if (number > 1) {
+            if (number != 0) {
                 System.out.print(ostat + " + ");
             } else {
                 System.out.print(ostat + " = " + sum);
