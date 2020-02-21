@@ -5,7 +5,7 @@ public class Task14 {
 
     public static void main(String[] args) {
 
-        int marks [] = new int [20];        //Создание массива из 30 элементов
+        int marks [] = new int [20];        //Создание массива из 20 элементов
         int maxMark = 0;                    //Создание переменной для максимальной оценки
         int indexMark = 0;                  //Создание переменной для индекса максимальной оценки
 
