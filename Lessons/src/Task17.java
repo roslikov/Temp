@@ -7,7 +7,6 @@ public class Task17 {
      */
     static int array[][] = new int[8][8];
 
-
     /**
      * The entry point of application.
      *
