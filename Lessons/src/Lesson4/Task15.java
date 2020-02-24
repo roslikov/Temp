@@ -1,3 +1,5 @@
+package Lesson4;
+
 public class Task15 {
 
     /*Опеределите сумму элементов массива, расположенных между максимальным и минимальным значениями.*/
@@ -6,26 +8,12 @@ public class Task15 {
      * The Array.
      */
     static int array [] = new int [15];
-    /**
-     * The Max array.
-     */
     static int maxArray = 0;
-    /**
-     * The Min array.
-     */
     static int minArray = 0;
-    /**
-     * The Max index.
-     */
     static int maxIndex = 0;
-    /**
-     * The Min index.
-     */
     static int minIndex = 0;
-    /**
-     * The Sum.
-     */
     static int sum = 0;
+
 
     /**
      * The entry point of application.
@@ -43,7 +31,7 @@ public class Task15 {
 
 
     /**
-     * Create and filling arr.
+     * Create and filling array.
      *
      * @param array the array
      */
@@ -56,7 +44,7 @@ public class Task15 {
     }
 
     /**
-     * Find max arr.
+     * Find max array.
      *
      * @param maxArray the max array
      * @return
@@ -72,7 +60,7 @@ public class Task15 {
     }
 
     /**
-     * Find min arr.
+     * Find min array.
      *
      * @param minArray the min array
      * @return

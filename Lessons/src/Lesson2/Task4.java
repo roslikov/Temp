@@ -1,3 +1,5 @@
+package Lesson2;
+
 public class Task4 {
 
         /*Имеется прямоугольное отверстие размерами a и b,
