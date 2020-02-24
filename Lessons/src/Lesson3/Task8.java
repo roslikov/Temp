@@ -1,3 +1,5 @@
+package Lesson3;
+
 public class Task8 {
 
     /*Посчитать факториал числа X*/

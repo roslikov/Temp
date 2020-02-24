@@ -1,3 +1,5 @@
+package Lesson2;
+
 public class Task7 {
 
     /*Имеется два дома размерами a на b и c на d. Имеется участок размерами e на f.
@@ -7,8 +9,8 @@ public class Task7 {
     public static void main(String[] args) {
             /*Ввод параметров участка и домов*/
         int hPlot = 5;
-        int wPlot = 15;
-        int hFirstHouse = 5;
+        int wPlot = 11;
+        int hFirstHouse = 6;
         int wFirstHouse = 3;
         int hSecondHouse = 3;
         int wSecondHouse = 11;

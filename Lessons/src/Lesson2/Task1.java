@@ -1,3 +1,5 @@
+package Lesson2;
+
 public class Task1 {
     /*Вывести Hello World!!!*/
     public static void main(String[] args) {

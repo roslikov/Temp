@@ -1,12 +1,14 @@
+package Lesson2;
+
 public class Task6 {
 
     /*Имеются три числа - день, месяц, год.
     Ввести в виде трех чисел дату следующего дня.*/
 
     public static void main(String[] args) {
-        int day = 28;
+        int day = 29;
         int month = 2;
-        int year = 2020;
+        int year = 1900;
         /*Проверка на корректность даты*/
         if (day < 1 || day > 31) {
             System.out.println("Введите день от 1 до 31");
