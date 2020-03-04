@@ -9,7 +9,7 @@ public class Run {
 
         Storage db = new Storage();
         Card card = new Card(5000, 5864);
-        db.create(card);
+        db.createBalance(card);
         MoneyOperation money = new Service();
         Scanner scan = new Scanner(System.in);
         boolean atmSession = true;

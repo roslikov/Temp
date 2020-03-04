@@ -5,7 +5,7 @@ import java.io.*;
 public class Storage implements StorageOperation {
 
     @Override
-    public Card create(Card card) throws IOException, ClassNotFoundException {
+    public Card createBalance(Card card) throws IOException, ClassNotFoundException {
         File file = new File("balance.db");
         boolean create = file.createNewFile();
         FileInputStream fileInputStream = new FileInputStream(file);
@@ -16,6 +16,7 @@ public class Storage implements StorageOperation {
         }
         return card;
     }
+
 
     @Override
     public Card read(Card card) throws IOException {
