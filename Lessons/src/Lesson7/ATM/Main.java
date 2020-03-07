@@ -1,11 +1,14 @@
 package Lesson7.ATM;
 
+
 import java.io.IOException;
 
+/**
+ * Start the program ATM
+ */
 public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-
-        Run.startApplication();
-
+        Card card = new Card(5000, 5864);
+        Security.checkPin(card);
     }
 }

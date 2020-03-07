@@ -1,5 +1,8 @@
 package Lesson7.ATM;
 
+/**
+ * User interface
+ */
 public class UI {
 
     UI menu = new UI();
