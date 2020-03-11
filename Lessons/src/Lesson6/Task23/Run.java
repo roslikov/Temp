@@ -1,4 +1,4 @@
-package Lesson7.ATM;
+package Lesson6.Task23;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -12,7 +12,6 @@ public class Run {
 
         StorageOperation db = new Storage();
         db.createBalance(card);
-        int i = card.getBalance();
         MoneyOperation money = new Service();
         Scanner scan = new Scanner(System.in);
         boolean atmSession = true;
