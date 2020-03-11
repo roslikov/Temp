@@ -1,4 +1,4 @@
-package Lesson7.ATM;
+package Lesson6.Task23;
 
 public class Service implements MoneyOperation {
 

@@ -1,4 +1,4 @@
-package Lesson7.ATM;
+package Lesson6.Task23;
 
 import java.io.*;
 
@@ -15,6 +15,7 @@ public class Storage implements StorageOperation {
      */
     @Override
     public Card createBalance(Card card) throws IOException, ClassNotFoundException {
+        //Card newCard;
         try {
             if (!file.exists()) {
                 file.createNewFile();
@@ -22,12 +23,12 @@ public class Storage implements StorageOperation {
                 ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
                 objectOutputStream.writeObject(card);
                 objectOutputStream.close();
-                return card;
             } else {
                 FileInputStream fileInputStream = new FileInputStream(file);
                 ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
                 card = (Card) objectInputStream.readObject();
                 objectInputStream.close();
+                return card;
             }
         } catch (IOException e) {
             e.printStackTrace();

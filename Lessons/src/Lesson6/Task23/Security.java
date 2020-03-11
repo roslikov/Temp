@@ -1,4 +1,4 @@
-package Lesson7.ATM;
+package Lesson6.Task23;
 
 import java.io.IOException;
 import java.util.Scanner;
