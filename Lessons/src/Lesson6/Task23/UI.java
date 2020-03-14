@@ -1,11 +1,14 @@
-package Lesson6.Task23_ATM;
+package Lesson6.Task23;
 
-public class Interface {
+/**
+ * User interface
+ */
+public class UI {
 
-    /**
-     * This is Menu.
-     */
-    public void menu() {
+    UI menu = new UI();
+
+    public static void menu() {
+
         System.out.println("Введите 1 для уточнения баланса.");
         System.out.println("Введите 2 для пополнения баланса.");
         System.out.println("Введите 3 для снятия наличных.");
