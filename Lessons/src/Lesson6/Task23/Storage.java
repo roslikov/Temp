@@ -6,17 +6,17 @@ public class Storage implements StorageOperation {
 
     File file = new File("balance.db");
 
+
     /**
      * Creating file database or reading database file.
      * @param card
-     * @return
      * @throws IOException
      * @throws ClassNotFoundException
+     * @return
      */
     @Override
     public Card createBalance(Card card) throws IOException, ClassNotFoundException {
-        //Card newCard;
-        try {
+        Card cardNew = new Card(0, 0);
             if (!file.exists()) {
                 file.createNewFile();
                 FileOutputStream fileOutputStream = new FileOutputStream("balance.db");
@@ -26,15 +26,11 @@ public class Storage implements StorageOperation {
             } else {
                 FileInputStream fileInputStream = new FileInputStream(file);
                 ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-                card = (Card) objectInputStream.readObject();
+                cardNew = (Card) objectInputStream.readObject();
                 objectInputStream.close();
-                return card;
+                return cardNew;
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return card;
+        return cardNew;
     }
 
 

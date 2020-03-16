@@ -40,6 +40,7 @@ public class Run {
                     System.out.println("Введите сумму:");
                     int cash = scan.nextInt();
                     money.takeMoney(cash, card);
+                    db.write(card);
                     System.out.printf("На вашем счету %s $\n", money.giveBalance(card));
                     break;
                 default:
