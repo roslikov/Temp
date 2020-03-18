@@ -1,5 +1,8 @@
 package Lesson6.Task23;
 
+/**
+ * The type Service.
+ */
 public class Service implements MoneyOperation {
 
     /**

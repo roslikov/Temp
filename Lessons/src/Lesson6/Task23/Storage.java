@@ -2,8 +2,14 @@ package Lesson6.Task23;
 
 import java.io.*;
 
+/**
+ * The type Storage.
+ */
 public class Storage implements StorageOperation {
 
+    /**
+     * The File.
+     */
     File file = new File("balance.db");
 
 
@@ -16,7 +22,7 @@ public class Storage implements StorageOperation {
      */
     @Override
     public Card createBalance(Card card) throws IOException, ClassNotFoundException {
-        Card cardNew = new Card(0, 0);
+        Card cardNew = null;
             if (!file.exists()) {
                 file.createNewFile();
                 FileOutputStream fileOutputStream = new FileOutputStream("balance.db");
@@ -27,8 +33,9 @@ public class Storage implements StorageOperation {
                 FileInputStream fileInputStream = new FileInputStream(file);
                 ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
                 cardNew = (Card) objectInputStream.readObject();
+                card.setBalance(cardNew.getBalance());
+                card.setPin(cardNew.getPin());
                 objectInputStream.close();
-                return cardNew;
             }
         return cardNew;
     }

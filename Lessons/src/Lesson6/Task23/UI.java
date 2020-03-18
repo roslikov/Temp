@@ -5,8 +5,14 @@ package Lesson6.Task23;
  */
 public class UI {
 
+    /**
+     * The Menu.
+     */
     UI menu = new UI();
 
+    /**
+     * Menu.
+     */
     public static void menu() {
 
         System.out.println("Введите 1 для уточнения баланса.");
