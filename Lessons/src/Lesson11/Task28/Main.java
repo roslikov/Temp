@@ -1,5 +1,8 @@
 package Lesson11.Task28;
 
+/*Создать список оценок учеников с помощью ArrayList, заполнить случайными
+оценками. Найти самую высокую оценку с использованием итератора.*/
+
 import java.util.ArrayList;
 import java.util.ListIterator;
 import java.util.Random;
