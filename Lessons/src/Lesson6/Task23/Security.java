@@ -7,7 +7,11 @@ import java.util.Scanner;
  * Check PIN code your card
  */
 public class Security {
-    public static void checkPin(Card card) throws IOException, ClassNotFoundException {
+    /**
+     * Check pin.
+     * @param card the card
+     */
+    public static void checkPin(Card card) {
         Scanner scan = new Scanner(System.in);
         int outCheckPin = 3;
 
@@ -16,7 +20,7 @@ public class Security {
                 System.out.println("Введите PIN: ");
                 int pin = scan.nextInt();
                 if (card.getPin() == pin){
-                    Run.startApplication(card);
+                    Main.setAtmSession(true);
                     break;
                 } else {
                     outCheckPin -= 1;
@@ -24,6 +28,7 @@ public class Security {
                 }
                 if (outCheckPin == 0){
                     System.out.println("Ваша карта заблокирована!");
+                    Main.setAtmSession(false);
                 }
             }
 

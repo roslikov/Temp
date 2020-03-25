@@ -2,21 +2,27 @@ package Lesson6.Task23;
 
 import java.io.*;
 
+/**
+ * The type Storage.
+ */
 public class Storage implements StorageOperation {
 
+    /**
+     * The File.
+     */
     File file = new File("balance.db");
+
 
     /**
      * Creating file database or reading database file.
      * @param card
-     * @return
      * @throws IOException
      * @throws ClassNotFoundException
+     * @return
      */
     @Override
     public Card createBalance(Card card) throws IOException, ClassNotFoundException {
-        //Card newCard;
-        try {
+        Card cardNew = null;
             if (!file.exists()) {
                 file.createNewFile();
                 FileOutputStream fileOutputStream = new FileOutputStream("balance.db");
@@ -26,15 +32,12 @@ public class Storage implements StorageOperation {
             } else {
                 FileInputStream fileInputStream = new FileInputStream(file);
                 ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-                card = (Card) objectInputStream.readObject();
+                cardNew = (Card) objectInputStream.readObject();
+                card.setBalance(cardNew.getBalance());
+                card.setPin(cardNew.getPin());
                 objectInputStream.close();
-                return card;
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return card;
+        return cardNew;
     }
 
 

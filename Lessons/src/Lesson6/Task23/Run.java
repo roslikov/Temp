@@ -4,17 +4,24 @@ import java.io.IOException;
 import java.util.Scanner;
 
 /**
- *
+ * The type Run.
  */
 public class Run {
 
+
+    /**
+     * Start application.
+     * @param card the card
+     * @throws IOException            the io exception
+     * @throws ClassNotFoundException the class not found exception
+     */
     public static void startApplication(Card card) throws IOException, ClassNotFoundException {
 
         StorageOperation db = new Storage();
         db.createBalance(card);
         MoneyOperation money = new Service();
         Scanner scan = new Scanner(System.in);
-        boolean atmSession = true;
+        boolean atmSession = Main.isAtmSession();
 
 
         while (atmSession) {
@@ -40,6 +47,7 @@ public class Run {
                     System.out.println("Введите сумму:");
                     int cash = scan.nextInt();
                     money.takeMoney(cash, card);
+                    db.write(card);
                     System.out.printf("На вашем счету %s $\n", money.giveBalance(card));
                     break;
                 default:
@@ -48,5 +56,6 @@ public class Run {
             }
         }
     }
+
 }
 
