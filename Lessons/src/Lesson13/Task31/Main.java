@@ -11,7 +11,7 @@ import java.util.Set;
 public class Main {
 
     public static void main(String[] args) {
-        File file = new File("Task31.db");
+        File file = new File("./Task31.db");
 
         try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
@@ -24,7 +24,6 @@ public class Main {
                 getPrintRemoveRepetitions(res);
                 res = bufferedReader.readLine();
             }
-
 
         } catch (FileNotFoundException e) {
             System.out.println("File not found!");
