@@ -16,7 +16,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        File file = new File("C:\\Lessons_HTP\\Lessons_HTP\\Task30.db");
+        File file = new File("");
         try {
             BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
             String res = bufferedReader.readLine();
