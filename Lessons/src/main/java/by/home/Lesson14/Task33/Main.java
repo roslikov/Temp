@@ -1,7 +1,6 @@
 package by.home.Lesson14.Task33;
 
 import java.io.File;
-import java.util.Objects;
 
 /*Вывести список файлов и каталогов выбранного каталога на диске. Файлы
 и каталоги должны быть распечатаны отдельно.*/
