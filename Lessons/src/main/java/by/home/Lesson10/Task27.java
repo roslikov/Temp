@@ -1,4 +1,4 @@
-package by.home.Lesson10.Task27;
+package by.home.Lesson10;
 
 /*Создать коллекцию, наполнить ее случайными числами.
 удалить повторяющиеся числа.*/
@@ -8,7 +8,7 @@ import java.util.Random;
 import java.util.stream.Collectors;
 
 
-public class Main {
+public class Task27 {
     public static void main(String[] args) {
 
         ArrayList<Integer> randomNumbers = (ArrayList<Integer>) new Random()

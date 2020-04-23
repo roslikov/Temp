@@ -1,4 +1,4 @@
-package by.home.Lesson10.Task28;
+package by.home.Lesson10;
 
 /*Создать список оценок учеников с помощью ArrayList, заполнить случайными
 оценками. Найти самую высокую оценку с использованием итератора.*/
@@ -8,7 +8,7 @@ import java.util.ListIterator;
 import java.util.Random;
 import java.util.stream.Collectors;
 
-public class Main {
+public class Task28 {
     public static int max = 0;
     public static void main(String[] args) {
 
